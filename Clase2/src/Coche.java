@@ -6,6 +6,10 @@ public class Coche extends Vehiculo {
         this.numPuertas = numPuertas;
     }
 
+    public Coche(){
+        super();
+    }
+
     public int getNumPuertas() {
         return numPuertas;
     }

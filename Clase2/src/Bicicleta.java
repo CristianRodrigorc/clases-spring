@@ -6,6 +6,10 @@ public class Bicicleta extends Vehiculo {
         this.numMarchas = numMarchas;
     }
 
+    public Bicicleta(){
+        super();
+    }
+
     public int getNumMarchas() {
         return numMarchas;
     }

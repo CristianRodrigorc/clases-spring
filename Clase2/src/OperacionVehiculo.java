@@ -5,19 +5,6 @@ import java.util.Scanner;
 
 public class OperacionVehiculo {
 
-
-    public static int sumarAnios(Vehiculo vehiculo, Bicicleta bici){
-        return vehiculo.getAnio() + bici.getAnio();
-    }
-
-    public static int sumarRuedas(Vehiculo vehiculo, Bicicleta bici){
-        return vehiculo.getNumRuedas() + bici.getNumRuedas();
-    }
-
-    public static String sorpresa(){
-        return "Sorpresa!!!!!";
-    }
-
     public static Vehiculo crearVehiculo(String marca, String modelo, int anio, int numRuedas){
         return new Vehiculo(marca, modelo, anio, numRuedas);
     }
@@ -45,6 +32,8 @@ public class OperacionVehiculo {
             System.out.println("Selecciona el tipo de vehículo a crear:");
             System.out.println("1. Coche\n2. Bicicleta");
             tipoVehiculo = sc.nextInt();
+            condition = false;
+
             } catch (InputMismatchException e){
                 System.out.println("Opción inválida. Por favor, ingrese 1 o 2.");
                 sc.next();
