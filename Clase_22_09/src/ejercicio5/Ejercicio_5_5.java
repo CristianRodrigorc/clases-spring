@@ -1,7 +1,5 @@
 package ejercicio5;
 
-import java.util.Scanner;
-
 import utils.EntradaUtils;
 
 public class Ejercicio_5_5 {
@@ -11,8 +9,7 @@ public class Ejercicio_5_5 {
     public void ejercicio_5_5_1(){
         
         int num1;
-        Scanner sc = new Scanner(System.in);
-        num1 = EntradaUtils.leerNumero(sc, Integer.class, "Ingrese un número del 1 al 12: ");
+        num1 = EntradaUtils.leerNumero(Integer.class, "Ingrese un número del 1 al 12: ");
         switch (num1) {
             case 1:
                 System.out.println("Enero");
@@ -59,8 +56,7 @@ public class Ejercicio_5_5 {
     //el usuario. Por ejemplo, si el usuario introduce 3, deberá escribir "tres".
     public void ejercicio_5_5_2(){
         int num1;
-        Scanner sc = new Scanner(System.in);
-        num1 = EntradaUtils.leerNumero(sc, Integer.class, "Ingrese un número del 1 al 10: ");
+        num1 = EntradaUtils.leerNumero(Integer.class, "Ingrese un número del 1 al 10: ");
         switch (num1) {
             case 1:
                 System.out.println("Uno");

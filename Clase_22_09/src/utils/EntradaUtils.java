@@ -4,7 +4,11 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class EntradaUtils {
-        public static <T extends Number> T leerNumero (Scanner sc, Class<T> tipo, String msg){
+
+        private static Scanner sc = new Scanner(System.in);
+
+
+        public static <T extends Number> T leerNumero (Class<T> tipo, String msg){
             boolean valido =false;
             while (!valido) {
                 try {
@@ -36,6 +40,10 @@ public class EntradaUtils {
                 }
             }
             return null;
+        }
+
+        public void cerrarScanner(){
+            sc.close();
         }
 
 }

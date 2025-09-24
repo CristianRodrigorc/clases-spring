@@ -1,7 +1,5 @@
 package ejercicio6;
 
-import java.util.Scanner;
-
 import utils.EntradaUtils;
 
 public class Ejercicio_6_2 {
@@ -42,16 +40,14 @@ public class Ejercicio_6_2 {
     //Crea un programa que pida al usuario dos números enteros y muestre su suma. Se repetirá 
     //hasta que los dos sean 0. Emplea do-while.
     public void ejercicio_6_2_4(){
-        Scanner sc = new Scanner(System.in);
         int num1, num2;
         boolean condition = true;
         do {
             System.out.println("********BIENVENIDO********\n\nPara detener el programa los 2 números deben ser \"0\"");
-            num1 = EntradaUtils.leerNumero( sc, Integer.class, "Ingrese un número entero:");
-            num2 = EntradaUtils.leerNumero( sc, Integer.class, "Ingrese un número entero:");
+            num1 = EntradaUtils.leerNumero(Integer.class, "Ingrese un número entero:");
+            num2 = EntradaUtils.leerNumero(Integer.class, "Ingrese un número entero:");
             if(num1 == 0 && num2 == 0){
                 condition = false;
-                sc.close();
                 System.out.println("********SALIENDO DEL PROGRAMA********");
             }
         } while (condition);
@@ -63,18 +59,16 @@ public class Ejercicio_6_2 {
     //ocasión, hazlo con do-while.
     public void ejercicio_6_2_5(){
         int user,pass;
-        Scanner sc = new Scanner(System.in);
         boolean condition = true;
         do {
             System.out.println("Bienvenido al Login\nDebe ingresar cómo usuario: 1809 y password: 1234 para terminar el login ");
-            user = EntradaUtils.leerNumero(sc, Integer.class, "Ingrese un número entero cómo usuario: ");
-            pass = EntradaUtils.leerNumero(sc, Integer.class, "Ingrese un número entero cómo password: ");
+            user = EntradaUtils.leerNumero(Integer.class, "Ingrese un número entero cómo usuario: ");
+            pass = EntradaUtils.leerNumero(Integer.class, "Ingrese un número entero cómo password: ");
             if(user == 1809 && pass == 1234){
                 System.out.println("Logín completado...");
                 condition = false;
             }else{
                 System.out.println("Error... Inténtalo otra vez...\n\n\n");
-                sc.close();
             }
         } while (condition);
     }
@@ -88,8 +82,7 @@ public class Ejercicio_6_2 {
         condition = true;
         condition2 = true;
 
-        Scanner sc = new Scanner(System.in);
-        num1 = EntradaUtils.leerNumero( sc, Integer.class, "Ingrese un número entero para dibujar un cuadrado:");
+        num1 = EntradaUtils.leerNumero(Integer.class, "Ingrese un número entero para dibujar un cuadrado:");
         do {
             do {
                 System.out.print("*");

@@ -4,7 +4,7 @@ public class Ejercicio_4_4 {
     //operaciones con números enteros, y luego crea un programa que muestre el
     //Calcula "a mano" el resultado de las siguientes
     //resultado.
-    public static void ejercicio_4_4_1(){
+    public static void ejercicio_1(){
         double a = 5;
         System.out.println("El valor actual de la variable A es: "+a);
 

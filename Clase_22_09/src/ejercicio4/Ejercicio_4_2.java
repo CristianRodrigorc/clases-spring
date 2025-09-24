@@ -3,7 +3,7 @@ package ejercicio4;
 public class Ejercicio_4_2 {
 
     //Crea un programa que muestre la división de dos números prefijados.
-    public void ejercicio_4_2_1(){
+    public void ejercicio_1(){
         int num1 = 20;
         int num2 = 2;
         int resultado = num1/num2;
@@ -13,7 +13,7 @@ public class Ejercicio_4_2 {
 
     //Crea un programa que muestre el resto de dividir
     //100 entre 30.
-    public void ejercicio_4_2_2(){
+    public void ejercicio_2(){
         int num1 = 20;
         int num2 = 2;
         int resultado = num1/num2;

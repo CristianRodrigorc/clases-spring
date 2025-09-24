@@ -5,7 +5,7 @@ public class Ejercicio_4_1 {
     //Crea un programa en Java que escriba en pantalla
     //el producto de dos números prefijados (pista: el símbolo de la multiplicación
     //es el asterisco, "*").
-    public void ejercicio4_1_1 (){
+    public void ejercicio_1 (){
         int num1 = 10;
         int num2 = 20;
 

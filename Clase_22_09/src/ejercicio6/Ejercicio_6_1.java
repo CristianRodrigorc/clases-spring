@@ -1,7 +1,5 @@
 package ejercicio6;
 
-import java.util.Scanner;
-
 import utils.EntradaUtils;
 
 public class Ejercicio_6_1 {
@@ -37,10 +35,9 @@ public class Ejercicio_6_1 {
         //el usuario introduzca un número distinto de cero.
         public void ejercicio_6_1_4(){
             int num1,resultado;
-            Scanner sc = new Scanner(System.in);
             boolean condition = true;
             do {
-                num1 = EntradaUtils.leerNumero(sc, Integer.class, "Ingrese un número entero, si preciona 0 se terminará el programa: ");
+                num1 = EntradaUtils.leerNumero(Integer.class, "Ingrese un número entero, si preciona 0 se terminará el programa: ");
                 if(num1 == 0){
                     condition =false;
                 }else{
@@ -53,12 +50,11 @@ public class Ejercicio_6_1 {
         //Se repetirá mientras el usuario introduzca un login distinto de "1809" o una contraseña distinta de "1234".
         public void ejercicio_6_1_5(){
             int user,pass;
-            Scanner sc = new Scanner(System.in);
             boolean condition = true;
             do {
                 System.out.println("Bienvenido al Login\nDebe ingresar cómo usuario: 1809 y password: 1234 para terminar el login ");
-                user = EntradaUtils.leerNumero(sc, Integer.class, "Ingrese un número entero cómo usuario: ");
-                pass = EntradaUtils.leerNumero(sc, Integer.class, "Ingrese un número entero cómo password: ");
+                user = EntradaUtils.leerNumero( Integer.class, "Ingrese un número entero cómo usuario: ");
+                pass = EntradaUtils.leerNumero( Integer.class, "Ingrese un número entero cómo password: ");
                 if(user == 1809 && pass == 1234){
                     System.out.println("Logín completado...");
                     condition = false;
@@ -74,12 +70,11 @@ public class Ejercicio_6_1 {
         public void ejercicio_6_1_6(){
             int user,pass,contador;
             contador = 3;
-            Scanner sc = new Scanner(System.in);
             boolean condition = true;
             do {
                 System.out.println("Bienvenido al Login\nDebe ingresar cómo usuario: 1809 y password: 1234 para terminar el login ");
-                user = EntradaUtils.leerNumero(sc, Integer.class, "Ingrese un número entero cómo usuario: ");
-                pass = EntradaUtils.leerNumero(sc, Integer.class, "Ingrese un número entero cómo password: ");
+                user = EntradaUtils.leerNumero(Integer.class, "Ingrese un número entero cómo usuario: ");
+                pass = EntradaUtils.leerNumero(Integer.class, "Ingrese un número entero cómo password: ");
                 if(user == 1809 && pass == 1234){
                     System.out.println("Logín completado...");
                     condition = false;
@@ -96,10 +91,9 @@ public class Ejercicio_6_1 {
         }
         //Crea un programa que escriba en pantalla tantos asteriscos como el usuario indique, todos ellos en la misma línea.
         public void ejercicio_6_1_7(){
-            Scanner sc = new Scanner(System.in);
             int num1, contador;
             boolean condition = true;
-            num1 = EntradaUtils.leerNumero(sc, Integer.class, "Ingrese un número entero: ");
+            num1 = EntradaUtils.leerNumero(Integer.class, "Ingrese un número entero: ");
             contador = 0;
             do {
                 if(num1 == contador){
