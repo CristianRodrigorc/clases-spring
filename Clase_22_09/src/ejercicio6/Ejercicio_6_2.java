@@ -4,7 +4,7 @@ import utils.EntradaUtils;
 
 public class Ejercicio_6_2 {
     //Crea un programa que muestre los números del 1 al 10, usando "do-while"
-    public void ejercicio_6_2_1(){
+    public void ejercicio_1(){
         boolean condition = true;
         int contador = 1;
         do {
@@ -14,7 +14,7 @@ public class Ejercicio_6_2 {
     }
 
     //Crea un programa que muestre los números pares del 20 al 2, decreciendo, usando "do-while"
-    public void ejercicio_6_2_2(){
+    public void ejercicio_2(){
         boolean condition = true;
         int contador = 20;
         do {
@@ -25,7 +25,7 @@ public class Ejercicio_6_2 {
     }
 
     //Crea un programa que muestre la "tabla de multiplicar del 5", usando "do-while"
-    public void ejercicio_6_2_3(){
+    public void ejercicio_3(){
         boolean condition = true;
         int contador,valor,resultado;
         contador = 0;
@@ -39,7 +39,7 @@ public class Ejercicio_6_2 {
 
     //Crea un programa que pida al usuario dos números enteros y muestre su suma. Se repetirá 
     //hasta que los dos sean 0. Emplea do-while.
-    public void ejercicio_6_2_4(){
+    public void ejercicio_4(){
         int num1, num2;
         boolean condition = true;
         do {
@@ -57,7 +57,7 @@ public class Ejercicio_6_2 {
     //Crea un programa que pida al usuario su login (un número entero) y su contraseña (otro número 
     //entero). Se repetirá hasta que el usuario introduzca como login "1809" y como contraseña "1234". En esta
     //ocasión, hazlo con do-while.
-    public void ejercicio_6_2_5(){
+    public void ejercicio_5(){
         int user,pass;
         boolean condition = true;
         do {
@@ -74,7 +74,7 @@ public class Ejercicio_6_2 {
     }
     //Crea un programa que pida un número de tipo byte al usuario y escriba en pantalla un cuadrado 
     //formado por asteriscos, que tendrá como alto y ancho la cantidad introducida por el usuario.
-    public void ejercicio_6_2_6(){
+    public void ejercicio_6(){
         int num1, contador, contador2;
         contador = 1;
         contador2 = 1;

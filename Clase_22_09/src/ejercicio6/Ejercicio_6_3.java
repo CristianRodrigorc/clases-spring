@@ -4,21 +4,21 @@ import utils.EntradaUtils;
 
 public class Ejercicio_6_3 {
     //Crea un programa que muestre los números del 1 al 15, usando "for"
-    public void ejercicio_6_3_1(){
+    public void ejercicio_1(){
         for (int i = 1; i <= 15; i++) {
             System.out.println(i);
         }
     }
 
     //Crea un programa que muestre los números pares del 20 al 2, decreciendo, usando "for"
-    public void ejercicio_6_3_2(){
+    public void ejercicio_2(){
         for (int i = 20; i > 0; i-=2) {
             System.out.println(i);
         }
     }
 
     //Crea un programa que muestre la "tabla de multiplicar del 5", usando "for"
-    public void ejercicio_6_3_3(){
+    public void ejercicio_3(){
         int num, resultado;
         num = 5;
         for (int i = 0; i <= 12; i++) {
@@ -29,7 +29,7 @@ public class Ejercicio_6_3 {
 
     //Crea un programa que muestre los números enteros del 0 al 100 que son múltiplos de 6 
     //(el resto al dividir por 6 sea 0).
-    public void ejercicio_6_3_4(){
+    public void ejercicio_4(){
         for (int i = 1; i <= 100; i++) {
             if(i % 6 == 0){
                 System.out.println("El número "+i+" es múltiplo de 6");
@@ -39,7 +39,7 @@ public class Ejercicio_6_3 {
 
     //Crea un programa que muestre los números enteros entre 0 y el que introduzca el usuario
     //que sean múltiplos de 3 (el resto al dividir por 3 es 0) y a la vez múltiplos de 7 (ídem).
-    public void ejercicio_6_3_5(){
+    public void ejercicio_5(){
         int num;
         num = EntradaUtils.leerNumero(Integer.class, "Ingrese un número entero:");
         for (int i = 1; i <= num; i++) {
@@ -51,7 +51,7 @@ public class Ejercicio_6_3 {
 
     //Crea un programa que pida dos números de tipo byte al usuario y escriba en pantalla un rectángulo 
     //formado por asteriscos, que tendrá como alto el primer número y como ancho el segundo número.
-    public void ejercicio_6_3_6(){
+    public void ejercicio_6(){
         byte num1,num2;
         num1 = EntradaUtils.leerNumero(Byte.class, "Ingrese un número en formato byte (-128 al 127) para la altura:");
         num2 = EntradaUtils.leerNumero(Byte.class, "Ingrese un número en formato byte (-128 al 127) para el ancho:");
@@ -70,7 +70,7 @@ public class Ejercicio_6_3 {
     //*  *
     //*  *
     //****
-    public void ejercicio_6_3_7(){
+    public void ejercicio_7(){
         byte num1;
         num1 = EntradaUtils.leerNumero(Byte.class, "Ingrese un número en formato byte (-128 al 127) para la altura:");
         for (int i = 0; i < num1; i++) {

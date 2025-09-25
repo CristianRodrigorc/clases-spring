@@ -5,7 +5,7 @@ import utils.EntradaUtils;
 public class Ejercicio_6_1 {
 
         //Crea un programa que muestre los números del 1 al 10, usando "while"
-        public void ejercicio_6_1_1(){
+        public void ejercicio_1(){
             int num = 1;
             while (num <= 10) {
                 System.out.println(num);
@@ -13,7 +13,7 @@ public class Ejercicio_6_1 {
             }
         }
         //Crea un programa que muestre los números pares del 20 al 2, decreciendo, usando "while"
-        public void ejercicio_6_1_2(){
+        public void ejercicio_2(){
             int num = 20;
             while (num>=0 && num % 2 == 0 && num != 0) {
                 System.out.println(num);
@@ -21,7 +21,7 @@ public class Ejercicio_6_1 {
             }
         }
         //Crea un programa que muestre la "tabla de multiplicar del 5", usando "while"
-        public void ejercicio_6_1_3(){
+        public void ejercicio_3(){
             int num1, num2, producto;
             num1 = 0;
             num2 = 5;
@@ -33,7 +33,7 @@ public class Ejercicio_6_1 {
         }
         //Crea un programa que pida al usuario un número entero y muestre su cuadrado. Se repetirá mientras 
         //el usuario introduzca un número distinto de cero.
-        public void ejercicio_6_1_4(){
+        public void ejercicio_4(){
             int num1,resultado;
             boolean condition = true;
             do {
@@ -48,7 +48,7 @@ public class Ejercicio_6_1 {
         }
         //Crea un programa que pida al usuario su login (un número entero) y su contraseña (otro número entero).
         //Se repetirá mientras el usuario introduzca un login distinto de "1809" o una contraseña distinta de "1234".
-        public void ejercicio_6_1_5(){
+        public void ejercicio_5(){
             int user,pass;
             boolean condition = true;
             do {
@@ -67,7 +67,7 @@ public class Ejercicio_6_1 {
         //Crea un programa que pida al usuario su login (un número entero) y su contraseña (otro número entero). Se repetirá mientras
         //el usuario introduzca un login distinto de "1809" o una contraseña distinta de "1234", hasta un máximo de tres veces. 
         //Tras tres fallos, se mostrará un mensaje avisando al usuario de que se le deniega el acceso.
-        public void ejercicio_6_1_6(){
+        public void ejercicio_6(){
             int user,pass,contador;
             contador = 3;
             boolean condition = true;
@@ -90,7 +90,7 @@ public class Ejercicio_6_1 {
             } while (condition);
         }
         //Crea un programa que escriba en pantalla tantos asteriscos como el usuario indique, todos ellos en la misma línea.
-        public void ejercicio_6_1_7(){
+        public void ejercicio_7(){
             int num1, contador;
             boolean condition = true;
             num1 = EntradaUtils.leerNumero(Integer.class, "Ingrese un número entero: ");
