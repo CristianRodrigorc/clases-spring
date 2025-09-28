@@ -15,7 +15,7 @@ public class UtilitiesLines {
         return lineaElegida;
     }
 
-    public static String leerValor(Class<T> tipo, String msg) {
+    public static <T> T leerValor(Class<T> tipo, String msg) {
         boolean valido = false;
         while (!valido) {
             try {
@@ -40,7 +40,7 @@ public class UtilitiesLines {
     }
 
     public void cerrarScanner(){
-            sc.close();
-        }    
+        sc.close();
+    }    
 
 }

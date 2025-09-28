@@ -18,7 +18,7 @@ public class Palabra {
     public boolean comprobarLetra(char letra){
         boolean retorno = false;
         for (int i = 0; i < palabraElegida.length(); i++) {
-            if (palabraElegida.charAt(i) == letra) {
+            if(palabraElegida.charAt(i) == letra){
                 retorno = true;
                 letrasAcertadas.set(i, letra);
             }
@@ -27,7 +27,7 @@ public class Palabra {
         return retorno;
     }
 
-    public static boolean comprobarPalabra(String palabraUser, String palabraEscogida){
+    public boolean comprobarPalabra(String palabraUser, String palabraEscogida){
         if (palabraUser == palabraEscogida) {
             return true;
         }else{
@@ -38,6 +38,14 @@ public class Palabra {
     public String getPalabraMostrada() {
         return this.palabraElegida;
 
+    }
+
+    public String getLetrasAcertadasPalabra(){
+        StringBuilder sb = new StringBuilder();
+        for (Character character : letrasElegidas) {
+            sb.append(character);
+        }
+        return sb.toString();
     }
 
     public List<Character> llenarGuiones(){
@@ -67,6 +75,5 @@ public class Palabra {
         }
         sb.append(" ]");
         return sb.toString();
-
     }
 }

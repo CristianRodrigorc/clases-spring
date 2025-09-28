@@ -1,23 +1,11 @@
 import model.Ahorcado;
 import model.Jugador;
 import model.Palabra;
-import utils.LectorDoc;
 import utils.UtilitiesLines;
 import visual.Consola;
 
 public class App {
-    public static void main(String[] args){
-        int lineas = LectorDoc.contadoLineas();
-        System.out.println("Lineas:"+lineas);
-        System.out.println(UtilitiesLines.escogerPalabra());
-        String hola = "hola";
-        int num = hola.length();
-        for (int i = 0; i < num; i++) {
-            System.out.println(hola.charAt(i));
-        }
-        System.out.println(num);
-
-
+    public static void main(String[] args){        
         // Crear un jugador
         Jugador jugador = new Jugador("Jugador 1");
 
@@ -32,14 +20,16 @@ public class App {
         Consola consola = new Consola();
 
         consola.bienvenido();
+
+        Palabra comprobar = (juego.getPalabra());
+
         // Juego principal
         while (!juego.juegoTerminado()) {
+            System.out.println(comprobar.getPalabraMostrada());
             consola.mostrarEstado(juego);
             String letra = consola.pedirLetraOPalabra();
-            juego.intentarLetra(letra);
+            juego.intentarLetraOPalabra(letra);
         }
-        
         consola.mostrarEstado(juego);
-
     }
 }
