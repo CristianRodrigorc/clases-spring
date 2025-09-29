@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Ahorcado</title>
+</head>
+<body>
+    <h1>Juego del Ahorcado</h1>
+    <span id = "palabra_e"></span>
+    <p id="palabra-oculta">_ _ _ _ _</p>
+    <input type="text" id="letra" maxlength="1" placeholder="Ingresa una letra">
+    <button onclick="adivinarLetra()">Adivinar</button>
+
+    <p>Letras incorrectas: <span id="letras-incorrectas"></span></p>
+
+    <script src="peticiones.js"></script>
+</body>
+</html>
