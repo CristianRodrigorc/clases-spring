@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Guess - Demo</title>
+    <style>
+      body { font-family: system-ui, Arial; margin: 2rem; }
+      code { background: #f3f3f3; padding: 0.2rem 0.4rem; }
+      input, button { padding: .4rem .6rem; margin: .2rem; }
+      .box { border: 1px solid #ddd; padding: 1rem; border-radius: .5rem; margin-bottom: 1rem; }
+      pre { background: #f8f8f8; padding: .5rem; overflow:auto; }
+    </style>
+  </head>
+  <body>
+    <h1>Guess - API Demo</h1>
+
+    <div class="box">
+      <h3>1) Health</h3>
+      <p><a href="/api/guess/health" target="_blank">GET /api/guess/health</a></p>
+    </div>
+
+    <div class="box">
+      <h3>2) Start</h3>
+      <label>min <input id="min" type="number" value="1"></label>
+      <label>max <input id="max" type="number" value="100"></label>
+      <button id="btnStart">POST /api/guess/start</button>
+      <button id="btnStartGet">GET /api/guess/start</button>
+      <div>gameId: <code id="gameId">—</code></div>
+    </div>
+
+    <div class="box">
+      <h3>3) Try</h3>
+      <label>number <input id="num" type="number" value="50"></label>
+      <button id="btnTry">POST /api/guess/try</button>
+      <button id="btnTryGet">GET /api/guess/try</button>
+      <div>Resultado: <code id="result">—</code></div>
+    </div>
+
+    <div class="box">
+      <h3>4) State</h3>
+      <button id="btnState">GET /api/guess/state/{gameId}</button>
+      <div>Estado: <code id="state">—</code></div>
+    </div>
+
+    <div class="box">
+      <h3>Console</h3>
+      <pre id="log"></pre>
+    </div>
+
+    <script>
+      const log = (obj) => {
+        const el = document.getElementById('log');
+        el.textContent = JSON.stringify(obj, null, 2);
+      };
+      let gameId = null;
+
+      document.getElementById('btnStart').onclick = async () => {
+        const min = parseInt(document.getElementById('min').value, 10);
+        const max = parseInt(document.getElementById('max').value, 10);
+        const res = await fetch('/api/guess/start', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ min, max })
+        });
+        const data = await res.json();
+        gameId = data.gameId;
+        document.getElementById('gameId').textContent = gameId || '—';
+        log(data);
+      };
+
+      document.getElementById('btnStartGet').onclick = async () => {
+        const min = parseInt(document.getElementById('min').value, 10);
+        const max = parseInt(document.getElementById('max').value, 10);
+        const res = await fetch(`/api/guess/start?min=${min}&max=${max}`);
+        const data = await res.json();
+        gameId = data.gameId;
+        document.getElementById('gameId').textContent = gameId || '—';
+        log(data);
+      };
+
+      document.getElementById('btnTry').onclick = async () => {
+        if (!gameId) return alert('Primero pulsa START');
+        const number = parseInt(document.getElementById('num').value, 10);
+        const res = await fetch('/api/guess/try', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ gameId, number })
+        });
+        const data = await res.json();
+        document.getElementById('result').textContent = `${data.status} (tries=${data.tries})`;
+        log(data);
+      };
+
+      document.getElementById('btnTryGet').onclick = async () => {
+        if (!gameId) return alert('Primero pulsa START');
+        const number = parseInt(document.getElementById('num').value, 10);
+        const res = await fetch(`/api/guess/try?gameId=${gameId}&number=${number}`);
+        const data = await res.json();
+        document.getElementById('result').textContent = `${data.status} (tries=${data.tries})`;
+        log(data);
+      };
+
+      document.getElementById('btnState').onclick = async () => {
+        if (!gameId) return alert('Primero pulsa START');
+        const res = await fetch(`/api/guess/state/${gameId}`);
+        const data = await res.json();
+        document.getElementById('state').textContent = `finished=${data.finished}, tries=${data.tries}`;
+        log(data);
+      };
+    </script>
+  </body>
+</html>
