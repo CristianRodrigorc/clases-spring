@@ -9,13 +9,13 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private String lastname;
+    private String first_name;
+    private String last_name;
     private int age;
 
-    public Usuario(String name, String lastname, int age){
-        this.name = name;
-        this.lastname = lastname;
+    public Usuario(String first_name, String last_name, int age){
+        this.first_name = first_name;
+        this.last_name = last_name;
         this.age = age;
     }
 
@@ -31,19 +31,19 @@ public class Usuario {
     }
 
     public String getName(){
-        return name;
+        return first_name;
     }
 
-    public void setName(String name){
-        this.name=name;
+    public void setName(String first_name){
+        this.first_name=first_name;
     }
 
     public String getLastName(){
-        return lastname;
+        return last_name;
     }
 
-    public void setLastName(String lastname){
-        this.lastname=lastname;
+    public void setLastName(String last_name){
+        this.last_name=last_name;
     }
 
     public int getAge(){
