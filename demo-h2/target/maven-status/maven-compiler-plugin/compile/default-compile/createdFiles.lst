@@ -1,0 +1,4 @@
+com\example\demoh2\controller\AlumnoController.class
+com\example\demoh2\repository\AlumnoRepository.class
+com\example\demoh2\DemoH2Application.class
+com\example\demoh2\model\Alumno.class
