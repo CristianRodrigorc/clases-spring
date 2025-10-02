@@ -21,4 +21,9 @@ public class UsuarioController {
     public List<Usuario> listarUsuarios() {
         return usuarioService.obtenerTodos();
     }
+
+    @PostMapping
+    public Usuario guardarUsuario(@RequestBody Usuario usuario){
+        return usuarioService.guardarUsuario(usuario);
+    }
 }

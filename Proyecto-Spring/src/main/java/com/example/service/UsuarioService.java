@@ -18,4 +18,11 @@ public class UsuarioService {
     public List<Usuario> obtenerTodos() {
         return usuarioRepository.findAll();
     }
+
+    public Usuario guardarUsuario (Usuario usuario){
+        if(usuario.getAge()<18){
+            throw new IllegalArgumentException("El usuario debe ser mayor de edad");
+        }
+        return usuarioRepository.save(usuario);
+    }
 }

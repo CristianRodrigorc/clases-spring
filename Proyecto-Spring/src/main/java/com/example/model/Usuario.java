@@ -9,13 +9,17 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
-    private String first_name;
-    private String last_name;
+
+    @Column(name = "first_name")
+    private String firstName;
+
+    @Column(name = "last_name")
+    private String lastName;
     private int age;
 
-    public Usuario(String first_name, String last_name, int age){
-        this.first_name = first_name;
-        this.last_name = last_name;
+    public Usuario(String firstName, String lastName, int age){
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.age = age;
     }
 
@@ -30,20 +34,20 @@ public class Usuario {
         this.id=id;
     }
 
-    public String getName(){
-        return first_name;
+    public String getFirstName(){
+        return firstName;
     }
 
-    public void setName(String first_name){
-        this.first_name=first_name;
+    public void setFirstName(String first_name){
+        this.firstName=first_name;
     }
 
     public String getLastName(){
-        return last_name;
+        return lastName;
     }
 
     public void setLastName(String last_name){
-        this.last_name=last_name;
+        this.lastName=last_name;
     }
 
     public int getAge(){
