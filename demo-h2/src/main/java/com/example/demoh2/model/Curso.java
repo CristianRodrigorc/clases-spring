@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "curso") // opcional; si no lo pones, Hibernate infiere el nombre
+@Table(name = "curso")
 public class Curso {
 
     @Id
@@ -16,13 +16,42 @@ public class Curso {
 
     private String nombre;
     private String profesor;
+    private int horas;
 
-    public Curso() {} // ctor vacío requerido por JPA
 
-    public Curso(String nombre, String profesor) {
+    public Curso() {}
+
+    public Curso(String nombre, String profesor, int horas) {
         this.nombre = nombre;
+        this.profesor = profesor;
+        this.horas = horas;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getProfesor() {
+        return profesor;
+    }
+
+    public void setProfesor(String profesor) {
         this.profesor = profesor;
     }
 
-    // getters/setters...
+    public int getHoras() {
+        return horas;
+    }
+
+    public void setHoras(int horas) {
+        this.horas = horas;
+    }
 }
