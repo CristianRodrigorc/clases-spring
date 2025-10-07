@@ -14,7 +14,7 @@ import com.example.demoh2.model.Curso;
 public class EntityToDtoService {
 
     public AlumnoDTO convertirAAlumnoDTO(Alumno alumno){
-        return new AlumnoDTO(alumno.getId(),alumno.getNombre(),alumno.getCurso().getId());
+        return new AlumnoDTO(alumno.getNombre(),alumno.getCurso().getId());
     }
 
     public List<AlumnoDTO> convertirAAlumnosDTO(List <Alumno> alumnos){
@@ -26,7 +26,7 @@ public class EntityToDtoService {
 
 
     public CursoDTO convertirACursoDTO(Curso curso){
-        return new CursoDTO(curso.getId(),curso.getNombre(),curso.getProfesor(),curso.getHoras());
+        return new CursoDTO(curso.getNombre(),curso.getProfesor(),curso.getHoras());
     }
 
     public List<CursoDTO> convertirACursosDTO(List <Curso> cursos){

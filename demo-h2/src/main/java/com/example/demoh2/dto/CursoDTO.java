@@ -1,3 +1,6 @@
 package com.example.demoh2.dto;
 
-public record CursoDTO(Long id, String nombre, String profesor, int horas) {}
+import org.springframework.validation.annotation.Validated;
+
+@Validated
+public record CursoDTO(String nombre, String profesor, int horas) {}

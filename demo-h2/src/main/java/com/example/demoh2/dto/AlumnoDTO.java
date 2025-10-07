@@ -1,3 +1,8 @@
 package com.example.demoh2.dto;
 
-public record AlumnoDTO(Long id, String nombre, Long curso_id) {}
+import org.antlr.v4.runtime.misc.NotNull;
+import org.springframework.validation.annotation.Validated;
+
+
+@Validated
+public record AlumnoDTO(@NotNull String nombre, Long curso_id) {}

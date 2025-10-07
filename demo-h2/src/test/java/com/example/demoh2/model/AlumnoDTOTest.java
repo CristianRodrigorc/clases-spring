@@ -10,9 +10,8 @@ public class AlumnoDTOTest {
     
     @Test
     void testConstructor(){
-        AlumnoDTO alumno = new AlumnoDTO(2L, "yo", 1L);
+        AlumnoDTO alumno = new AlumnoDTO("yo", 1L);
 
-        assertEquals(2L,alumno.id());
         assertEquals("yo", alumno.nombre());
         assertEquals(1l,alumno.curso_id());
     }
@@ -20,8 +19,8 @@ public class AlumnoDTOTest {
     @Test
     void testAlumnoDTONotEquals() {
         
-        AlumnoDTO alumnoDTO1 = new AlumnoDTO(1L, "Juan Pérez", 101L);
-        AlumnoDTO alumnoDTO2 = new AlumnoDTO(2L, "María López", 102L);
+        AlumnoDTO alumnoDTO1 = new AlumnoDTO("Juan Pérez", 101L);
+        AlumnoDTO alumnoDTO2 = new AlumnoDTO("María López", 102L);
 
         assertNotEquals(alumnoDTO1, alumnoDTO2);
     }
