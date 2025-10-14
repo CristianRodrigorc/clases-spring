@@ -1,4 +1,4 @@
-package com.example.demoh2.controller;
+    package com.example.demoh2.controller;
 
 import com.example.demoh2.dto.AlumnoDTO;
 import com.example.demoh2.model.Alumno;
