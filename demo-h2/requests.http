@@ -1,8 +1,9 @@
 ### Hola
-GET http://localhost:8080/api/productos/ping
+GET http://localhost:8080/api/saludos
+Authorization: Basic Alumno:1234
 
 ### Listar
-GET http://localhost:8080/api/productos
+GET http://localhost:8080/api/alumnos
 
 ### Obtener
 GET http://localhost:8080/api/productos/4
