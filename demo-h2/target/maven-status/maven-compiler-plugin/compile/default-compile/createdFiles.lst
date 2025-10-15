@@ -1,10 +1,12 @@
 com\example\demoh2\dto\CursoDTO.class
-com\example\demoh2\model\Curso.class
 com\example\demoh2\controller\AlumnoController.class
 com\example\demoh2\repository\AlumnoRepository.class
-com\example\demoh2\DemoH2Application.class
 com\example\demoh2\service\EntityToDtoService.class
 com\example\demoh2\dto\AlumnoDTO.class
-com\example\demoh2\repository\CursoRepository.class
 com\example\demoh2\controller\CursoController.class
+com\example\demoh2\model\Curso.class
+com\example\demoh2\controller\SaludoController.class
+com\example\demoh2\DemoH2Application.class
+com\example\demoh2\repository\CursoRepository.class
+com\example\demoh2\config\SegurityConfig.class
 com\example\demoh2\model\Alumno.class

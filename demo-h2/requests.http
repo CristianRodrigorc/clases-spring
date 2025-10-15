@@ -1,0 +1,38 @@
+### Hola
+GET http://localhost:8080/api/productos/ping
+
+### Listar
+GET http://localhost:8080/api/productos
+
+### Obtener
+GET http://localhost:8080/api/productos/4
+
+### Obtener por rango ID
+GET http://localhost:8080/api/productos/rangoid?min=6&max=11
+
+### Obtener por rango precio
+GET http://localhost:8080/api/productos/rangoprecio?min=.0.5&max=2.2
+
+### Crear
+POST http://localhost:8080/api/productos
+Content-Type: application/json
+
+{
+  "nombre": "Teclado mecánico",
+  "precio": 49.9,
+  "stock": 25
+}
+
+### Actualizar
+PUT http://localhost:8080/api/productos/1
+Content-Type: application/json
+
+{
+  "nombre": "Cuaderno A4 premium",
+  "precio": 4.1,
+  "stock": 110
+}
+
+### Borrar
+DELETE http://localhost:8080/api/productos/2
+
